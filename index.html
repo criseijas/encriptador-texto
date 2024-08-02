@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de Texto</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+    <header>
+        <h1 class="encabezado_titulo">Encriptador de Texto</h1>
+    </header>
+    <main class="seccion_principal">
+        <section class="seccion_usuario">
+            <textarea class="mensajeUsuario" id="mensajeUsuario" rows="3" cols="25"></textarea>
+            <div class="container">
+                <img class="imagen_info" src="/assets/img/Frame 1.png" alt="Frame">
+                <button class="btn" onclick="encriptarMensaje()">Encriptar</button>
+                <button class="btn" onclick="desencriptarMensaje()">Desencriptar</button>
+            </div>
+        </section>
+        <section class="seccion_mensaje">
+                <textarea id="mensaje_encriptado" rows="3" cols="25"></textarea>
+                <img id="imagen" class="imagenImg" width="100%" src="/assets/img/kisspng-emoticon.png" alt="Imagen Muñeco con lupa">
+                <img id="imagen_texto" class="imagenTexto" width="120%" src="/assets/img/Frame 5.png" alt="Imagen con el texto que no se encontro ningun mensaje">
+                <button class="btnCopiar btn" id="copiar" onclick="copiarMensaje()">Copiar</button>
+        </section>
+    </main>
+    <script src="code.js"></script>
+</body>
+</html>
