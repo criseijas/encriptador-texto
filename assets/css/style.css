@@ -4,6 +4,11 @@
     --color-fondo: #96C9F4;
     --color-titulo: #0F67B1;
     --color-botones: #3FA2F6;
+    --color-seccionMensaje: #FFFFFF;
+
+    --box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+
+    --fuente: "Open Sans", sans-serif;
 }
 
 *{
@@ -13,13 +18,15 @@
 
 body{
     background-color: var(--color-fondo);
-    font-family: "Open Sans", sans-serif;
+    font-family: var(--fuente);
     font-weight: 400;
 }
 
 .encabezado_titulo{
     padding: 2.5rem;
     color: var(--color-titulo);
+    font-family: var(--fuente-titulo);
+    font-weight: 600;
 }
 
 .seccion_principal{
@@ -37,8 +44,11 @@ body{
     gap: 70%;
 }
 
+::placeholder { color: blue; }
+
 .mensajeUsuario{
     border-radius: 1rem;
+    box-shadow: var(--box-shadow);
 }
 
 .imagen_info{
@@ -48,13 +58,14 @@ body{
 .seccion_mensaje{
     width: 20%;
     height: auto;
-    background-color: #FFFFFF;
+    background-color: var(--color-seccionMensaje);
     padding: 1.5rem 3rem 4rem 3rem;
     border-radius: 1.5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 2rem;
+    box-shadow: var(--box-shadow);
 }
 
 #mensaje_encriptado, #mensajeUsuario{
@@ -82,7 +93,7 @@ body{
     width: 49%;
     padding: 0.5rem;
     font-size: 1.2rem;
-    border-style: none;
+    border: 2px solid var(--color-titulo);
     border-radius: 1rem;
     background-color: var(--color-botones);
     cursor: pointer;
