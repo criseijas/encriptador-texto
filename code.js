@@ -12,6 +12,7 @@
 
 function encriptarMensaje() {
     let mensaje = encriptar(mensajeUsuario.value);
+    
     btnCopiar.classList.remove("btnCopiar"); //remueve la clase btnCopiar
     imagen.classList.add('imagen');
     imagenTexto.classList.add('imagen_texto');
@@ -23,7 +24,7 @@ function encriptar(msg){
     
     const matrizCodigo = [["e","enter"], ["i","imes"], ["a","ai"], ["o","ober"], ["u","ufat"]];
     console.table(matrizCodigo);
-
+    msg = msg.toLowerCase();
     for(let i=0; i < matrizCodigo.length; i++){
         if(msg.includes(matrizCodigo[i][0])){
             msg = msg.replaceAll(matrizCodigo[i][0], matrizCodigo[i][1])
@@ -57,5 +58,13 @@ function desencriptar(msg) {
     }
     console.log(msg)
     return msg;
+}
+
+function condicionesIniciales() {
+    mensajeUsuario.value = "";
+    textAreaEncriptado.value = "";
+    imagen.classList.remove('imagen');
+    imagenTexto.classList.remove('imagen_texto');
+    btnCopiar.classList.add("btnCopiar");
 }
 
